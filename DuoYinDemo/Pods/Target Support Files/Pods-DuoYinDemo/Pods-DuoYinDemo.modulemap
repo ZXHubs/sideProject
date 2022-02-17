@@ -1,0 +1,6 @@
+framework module Pods_DuoYinDemo {
+  umbrella header "Pods-DuoYinDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,23 +7,36 @@
 
 import UIKit
 
-class FeedRootViewController: UIViewController {
+class FeedRootViewController: UIViewController, FeedContainerViewControllnerDelegate {
 
+    private var containerVC: FeedContainerViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // 初始化 container VC
+        containerVC = FeedContainerViewController()
+        containerVC.delegate = self
+        addChild(childViewController: containerVC) { subView in
+            subView.snp.makeConstraints { make in
+                make.leading.trailing.top.equalTo(self.view)
+                make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottomMargin)
+            }
+        }
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: FeedContainerViewControllnerDelegate
+    
+    func feedContainerViewController(controller: FeedContainerViewController, viewControllerAt indexPath: IndexPath) -> UIViewController {
+        let vc = UIViewController()
+        vc.view.backgroundColor = UIColor.randomColor
+        return vc
     }
-    */
+    
+    func numberOfViewControllers(in containerViewController: FeedContainerViewController) -> Int {
+        return 2
+    }
+
 
 }

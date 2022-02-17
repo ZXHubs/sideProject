@@ -19,6 +19,10 @@
 		312D270F27BE3F8200D0BB64 /* CameraRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D270E27BE3F8200D0BB64 /* CameraRootViewController.swift */; };
 		312D271127BE3F9100D0BB64 /* MessageRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D271027BE3F9100D0BB64 /* MessageRootViewController.swift */; };
 		312D271427BE3FBC00D0BB64 /* ProfileRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D271327BE3FBC00D0BB64 /* ProfileRootViewController.swift */; };
+		312D271627BE4D9100D0BB64 /* FeedContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D271527BE4D9100D0BB64 /* FeedContainerViewController.swift */; };
+		312D271827BE4F6D00D0BB64 /* FeedContainerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D271727BE4F6D00D0BB64 /* FeedContainerCollectionViewCell.swift */; };
+		312D271B27BE514B00D0BB64 /* UIViewController+Douyin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D271A27BE514B00D0BB64 /* UIViewController+Douyin.swift */; };
+		312D271D27BE6B6100D0BB64 /* UIcolor+Douyin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D271C27BE6B6100D0BB64 /* UIcolor+Douyin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +39,10 @@
 		312D270E27BE3F8200D0BB64 /* CameraRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRootViewController.swift; sourceTree = "<group>"; };
 		312D271027BE3F9100D0BB64 /* MessageRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRootViewController.swift; sourceTree = "<group>"; };
 		312D271327BE3FBC00D0BB64 /* ProfileRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRootViewController.swift; sourceTree = "<group>"; };
+		312D271527BE4D9100D0BB64 /* FeedContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedContainerViewController.swift; sourceTree = "<group>"; };
+		312D271727BE4F6D00D0BB64 /* FeedContainerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedContainerCollectionViewCell.swift; sourceTree = "<group>"; };
+		312D271A27BE514B00D0BB64 /* UIViewController+Douyin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Douyin.swift"; sourceTree = "<group>"; };
+		312D271C27BE6B6100D0BB64 /* UIcolor+Douyin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIcolor+Douyin.swift"; sourceTree = "<group>"; };
 		403B0DA55220BC05D25DDE00 /* Pods_DuoYinDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DuoYinDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46418FFD2C2ED1D11C8E864E /* Pods-DuoYinDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DuoYinDemo.debug.xcconfig"; path = "Target Support Files/Pods-DuoYinDemo/Pods-DuoYinDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D10B278F91E0675C407D037E /* Pods-DuoYinDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DuoYinDemo.release.xcconfig"; path = "Target Support Files/Pods-DuoYinDemo/Pods-DuoYinDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +81,7 @@
 		312D26E727BE32B900D0BB64 /* DuoYinDemo */ = {
 			isa = PBXGroup;
 			children = (
+				312D271927BE50E000D0BB64 /* Utils */,
 				312D270127BE3C5D00D0BB64 /* Profile */,
 				312D270027BE3C5300D0BB64 /* Message */,
 				312D26FF27BE3C4300D0BB64 /* Camera */,
@@ -100,6 +109,7 @@
 		312D26FD27BE3C3000D0BB64 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				312D271E27BE6CA000D0BB64 /* Views */,
 				312D270327BE3C7A00D0BB64 /* ViewControllers */,
 			);
 			path = Home;
@@ -149,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				312D270A27BE3F4300D0BB64 /* FeedRootViewController.swift */,
+				312D271527BE4D9100D0BB64 /* FeedContainerViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -183,6 +194,23 @@
 				312D271327BE3FBC00D0BB64 /* ProfileRootViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		312D271927BE50E000D0BB64 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				312D271A27BE514B00D0BB64 /* UIViewController+Douyin.swift */,
+				312D271C27BE6B6100D0BB64 /* UIcolor+Douyin.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		312D271E27BE6CA000D0BB64 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				312D271727BE4F6D00D0BB64 /* FeedContainerCollectionViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		8EE126D22CFDB9A1D890AC52 /* Frameworks */ = {
@@ -316,13 +344,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				312D271B27BE514B00D0BB64 /* UIViewController+Douyin.swift in Sources */,
 				312D270D27BE3F6300D0BB64 /* FriendRootViewController.swift in Sources */,
 				312D270927BE3F2400D0BB64 /* TabBarViewController.swift in Sources */,
 				312D271127BE3F9100D0BB64 /* MessageRootViewController.swift in Sources */,
 				312D270B27BE3F4300D0BB64 /* FeedRootViewController.swift in Sources */,
+				312D271627BE4D9100D0BB64 /* FeedContainerViewController.swift in Sources */,
+				312D271D27BE6B6100D0BB64 /* UIcolor+Douyin.swift in Sources */,
 				312D26ED27BE32B900D0BB64 /* ViewController.swift in Sources */,
 				312D271427BE3FBC00D0BB64 /* ProfileRootViewController.swift in Sources */,
 				312D26E927BE32B900D0BB64 /* AppDelegate.swift in Sources */,
+				312D271827BE4F6D00D0BB64 /* FeedContainerCollectionViewCell.swift in Sources */,
 				312D270F27BE3F8200D0BB64 /* CameraRootViewController.swift in Sources */,
 				312D26EB27BE32B900D0BB64 /* SceneDelegate.swift in Sources */,
 			);

@@ -12,6 +12,8 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = UIColor.white
+        
         // 首页
         let feedRootVC = FeedRootViewController()
         addChildViewController(childViewController: feedRootVC, title: "首页", image: nil, selectedIamge: nil)

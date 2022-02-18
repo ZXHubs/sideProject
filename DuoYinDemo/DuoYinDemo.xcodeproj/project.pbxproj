@@ -23,6 +23,7 @@
 		312D271827BE4F6D00D0BB64 /* FeedContainerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D271727BE4F6D00D0BB64 /* FeedContainerCollectionViewCell.swift */; };
 		312D271B27BE514B00D0BB64 /* UIViewController+Douyin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D271A27BE514B00D0BB64 /* UIViewController+Douyin.swift */; };
 		312D271D27BE6B6100D0BB64 /* UIcolor+Douyin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D271C27BE6B6100D0BB64 /* UIcolor+Douyin.swift */; };
+		31D8D63527BF2C3600A99BF1 /* FeedTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D8D63427BF2C3600A99BF1 /* FeedTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		312D271727BE4F6D00D0BB64 /* FeedContainerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedContainerCollectionViewCell.swift; sourceTree = "<group>"; };
 		312D271A27BE514B00D0BB64 /* UIViewController+Douyin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Douyin.swift"; sourceTree = "<group>"; };
 		312D271C27BE6B6100D0BB64 /* UIcolor+Douyin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIcolor+Douyin.swift"; sourceTree = "<group>"; };
+		31D8D63427BF2C3600A99BF1 /* FeedTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTabView.swift; sourceTree = "<group>"; };
 		403B0DA55220BC05D25DDE00 /* Pods_DuoYinDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DuoYinDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46418FFD2C2ED1D11C8E864E /* Pods-DuoYinDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DuoYinDemo.debug.xcconfig"; path = "Target Support Files/Pods-DuoYinDemo/Pods-DuoYinDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D10B278F91E0675C407D037E /* Pods-DuoYinDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DuoYinDemo.release.xcconfig"; path = "Target Support Files/Pods-DuoYinDemo/Pods-DuoYinDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				312D271727BE4F6D00D0BB64 /* FeedContainerCollectionViewCell.swift */,
+				31D8D63427BF2C3600A99BF1 /* FeedTabView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				312D271127BE3F9100D0BB64 /* MessageRootViewController.swift in Sources */,
 				312D270B27BE3F4300D0BB64 /* FeedRootViewController.swift in Sources */,
 				312D271627BE4D9100D0BB64 /* FeedContainerViewController.swift in Sources */,
+				31D8D63527BF2C3600A99BF1 /* FeedTabView.swift in Sources */,
 				312D271D27BE6B6100D0BB64 /* UIcolor+Douyin.swift in Sources */,
 				312D26ED27BE32B900D0BB64 /* ViewController.swift in Sources */,
 				312D271427BE3FBC00D0BB64 /* ProfileRootViewController.swift in Sources */,

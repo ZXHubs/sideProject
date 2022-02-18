@@ -7,9 +7,12 @@
 
 import UIKit
 
-class FeedRootViewController: UIViewController, FeedContainerViewControllnerDelegate {
+class FeedRootViewController: UIViewController, FeedContainerViewControllnerDelegate, FeedTabViewDelegate {
+    
 
     private var containerVC: FeedContainerViewController!
+    
+    private var tabView: FeedTabView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +27,15 @@ class FeedRootViewController: UIViewController, FeedContainerViewControllnerDele
             }
         }
         
+        // TabView
+        tabView = FeedTabView(items: [.init(index: 0, title: "推荐"), .init(index: 1, title: "关注")], delegate: self)
+        view.addSubview(tabView)
+        tabView.snp.makeConstraints { make in
+            make.centerX.equalTo(self.view)
+            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top)
+            make.width.equalTo(150)
+            make.height.equalTo(40)
+        }
     }
     
     // MARK: FeedContainerViewControllnerDelegate
@@ -37,6 +49,22 @@ class FeedRootViewController: UIViewController, FeedContainerViewControllnerDele
     func numberOfViewControllers(in containerViewController: FeedContainerViewController) -> Int {
         return 2
     }
-
+    
+    func feedContainerViewController(controller: FeedContainerViewController, didScroll scrollView: UIScrollView) {
+        let pageWidth = scrollView.frame.width // 一页有多宽
+        let contentOffsetX = scrollView.contentOffset.x // 滚动位置
+        
+        guard pageWidth>0 else {
+            return
+        }
+        let progress = contentOffsetX / pageWidth
+        
+        tabView.updateSelectedIndex(with: progress)
+    }
+    
+    // MARK: FeedTabViewDelegate
+    func didSelect(item: FeedTabView.Item, in tabView: FeedTabView) {
+        containerVC.setPageIndex(index: item.index, animated: true)
+    }
 
 }

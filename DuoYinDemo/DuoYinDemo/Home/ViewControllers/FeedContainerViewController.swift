@@ -14,6 +14,7 @@ protocol FeedContainerViewControllnerDelegate: NSObjectProtocol {
     func feedContainerViewController(controller: FeedContainerViewController, viewControllerAt indexPath:IndexPath) -> UIViewController // 返回对应位置的控制器
     
     func numberOfViewControllers(in containerViewController:FeedContainerViewController) -> Int // 返回控制器个数
+    func feedContainerViewController(controller: FeedContainerViewController, didScroll scrollView: UIScrollView)
 }
 
 
@@ -47,6 +48,20 @@ class FeedContainerViewController: UIViewController, UICollectionViewDelegateFlo
         collectionView.snp.makeConstraints { make in
             make.edges.equalTo(0)
         }
+    }
+    
+    // MARK: Public
+    public func setPageIndex(index: Int, animated: Bool) {
+        guard index < collectionView.numberOfItems(inSection: 0) else {
+            return
+        }
+        collectionView.setContentOffset(CGPoint(x: CGFloat(index)*collectionView.frame.width, y: 0), animated: animated)
+    }
+    
+    // MARK: UIScrollViewDelegate
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        delegate?.feedContainerViewController(controller: self, didScroll: scrollView)
     }
     
     // MARK: UICollectionViewDelegateFlowLayout

@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		2F765BA634858762A60982EA /* Pods_DuoYinDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 403B0DA55220BC05D25DDE00 /* Pods_DuoYinDemo.framework */; };
+		31207EA627C3BB8E00030D9C /* ic_home_like_before.png in Resources */ = {isa = PBXBuildFile; fileRef = 31207EA227C3BB8E00030D9C /* ic_home_like_before.png */; };
+		31207EA727C3BB8E00030D9C /* icon_home_like_new.json in Resources */ = {isa = PBXBuildFile; fileRef = 31207EA327C3BB8E00030D9C /* icon_home_like_new.json */; };
+		31207EA827C3BB8E00030D9C /* icon_home_dislike_new.json in Resources */ = {isa = PBXBuildFile; fileRef = 31207EA427C3BB8E00030D9C /* icon_home_dislike_new.json */; };
+		31207EA927C3BB8E00030D9C /* ic_home_like_after.png in Resources */ = {isa = PBXBuildFile; fileRef = 31207EA527C3BB8E00030D9C /* ic_home_like_after.png */; };
+		31207EAC27C3BC5000030D9C /* FeedUserAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31207EAB27C3BC5000030D9C /* FeedUserAvatarView.swift */; };
+		31207EAE27C3BDD700030D9C /* FeedLikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31207EAD27C3BDD700030D9C /* FeedLikeButton.swift */; };
 		312D26E927BE32B900D0BB64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D26E827BE32B900D0BB64 /* AppDelegate.swift */; };
 		312D26EB27BE32B900D0BB64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D26EA27BE32B900D0BB64 /* SceneDelegate.swift */; };
 		312D26ED27BE32B900D0BB64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D26EC27BE32B900D0BB64 /* ViewController.swift */; };
@@ -31,6 +37,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		31207EA227C3BB8E00030D9C /* ic_home_like_before.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_home_like_before.png; sourceTree = "<group>"; };
+		31207EA327C3BB8E00030D9C /* icon_home_like_new.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = icon_home_like_new.json; sourceTree = "<group>"; };
+		31207EA427C3BB8E00030D9C /* icon_home_dislike_new.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = icon_home_dislike_new.json; sourceTree = "<group>"; };
+		31207EA527C3BB8E00030D9C /* ic_home_like_after.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_home_like_after.png; sourceTree = "<group>"; };
+		31207EAB27C3BC5000030D9C /* FeedUserAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUserAvatarView.swift; sourceTree = "<group>"; };
+		31207EAD27C3BDD700030D9C /* FeedLikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLikeButton.swift; sourceTree = "<group>"; };
 		312D26E527BE32B800D0BB64 /* DuoYinDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DuoYinDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		312D26E827BE32B900D0BB64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		312D26EA27BE32B900D0BB64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +82,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31207EA027C3B8AE00030D9C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				31207EA127C3B8BA00030D9C /* lottie */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		31207EA127C3B8BA00030D9C /* lottie */ = {
+			isa = PBXGroup;
+			children = (
+				31207EA527C3BB8E00030D9C /* ic_home_like_after.png */,
+				31207EA227C3BB8E00030D9C /* ic_home_like_before.png */,
+				31207EA427C3BB8E00030D9C /* icon_home_dislike_new.json */,
+				31207EA327C3BB8E00030D9C /* icon_home_like_new.json */,
+			);
+			path = lottie;
+			sourceTree = "<group>";
+		};
+		31207EAA27C3BC2900030D9C /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				31207EAB27C3BC5000030D9C /* FeedUserAvatarView.swift */,
+				31207EAD27C3BDD700030D9C /* FeedLikeButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 		312D26DC27BE32B800D0BB64 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +131,7 @@
 		312D26E727BE32B900D0BB64 /* DuoYinDemo */ = {
 			isa = PBXGroup;
 			children = (
+				31207EA027C3B8AE00030D9C /* Resource */,
 				312D271927BE50E000D0BB64 /* Utils */,
 				312D270127BE3C5D00D0BB64 /* Profile */,
 				312D270027BE3C5300D0BB64 /* Message */,
@@ -221,6 +262,7 @@
 		312D271E27BE6CA000D0BB64 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				31207EAA27C3BC2900030D9C /* Buttons */,
 				312D271727BE4F6D00D0BB64 /* FeedContainerCollectionViewCell.swift */,
 				31D8D63427BF2C3600A99BF1 /* FeedTabView.swift */,
 				31D8D63827C24FBF00A99BF1 /* FeedTableViewCell.swift */,
@@ -314,7 +356,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				312D26F527BE32BB00D0BB64 /* LaunchScreen.storyboard in Resources */,
+				31207EA727C3BB8E00030D9C /* icon_home_like_new.json in Resources */,
+				31207EA827C3BB8E00030D9C /* icon_home_dislike_new.json in Resources */,
 				312D26F227BE32BB00D0BB64 /* Assets.xcassets in Resources */,
+				31207EA927C3BB8E00030D9C /* ic_home_like_after.png in Resources */,
+				31207EA627C3BB8E00030D9C /* ic_home_like_before.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,7 +427,9 @@
 				31D8D63927C24FBF00A99BF1 /* FeedTableViewCell.swift in Sources */,
 				312D26ED27BE32B900D0BB64 /* ViewController.swift in Sources */,
 				312D271427BE3FBC00D0BB64 /* ProfileRootViewController.swift in Sources */,
+				31207EAC27C3BC5000030D9C /* FeedUserAvatarView.swift in Sources */,
 				312D26E927BE32B900D0BB64 /* AppDelegate.swift in Sources */,
+				31207EAE27C3BDD700030D9C /* FeedLikeButton.swift in Sources */,
 				312D271827BE4F6D00D0BB64 /* FeedContainerCollectionViewCell.swift in Sources */,
 				312D270F27BE3F8200D0BB64 /* CameraRootViewController.swift in Sources */,
 				312D26EB27BE32B900D0BB64 /* SceneDelegate.swift in Sources */,

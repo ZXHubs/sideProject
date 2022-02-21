@@ -10,7 +10,7 @@ import UIKit
 class FeedContainerCollectionViewCell: UICollectionViewCell {
     static let reuseIdentifierString = "FeedContainerCollectionViewCell"
     
-    private var viewController: UIViewController?
+    private(set) var viewController: UIViewController?
     
     public func config(with viewController: UIViewController) {
         self.viewController?.view.removeFromSuperview()

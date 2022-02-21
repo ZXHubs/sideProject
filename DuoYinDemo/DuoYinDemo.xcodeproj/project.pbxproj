@@ -23,6 +23,8 @@
 		312D271827BE4F6D00D0BB64 /* FeedContainerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D271727BE4F6D00D0BB64 /* FeedContainerCollectionViewCell.swift */; };
 		312D271B27BE514B00D0BB64 /* UIViewController+Douyin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D271A27BE514B00D0BB64 /* UIViewController+Douyin.swift */; };
 		312D271D27BE6B6100D0BB64 /* UIcolor+Douyin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D271C27BE6B6100D0BB64 /* UIcolor+Douyin.swift */; };
+		3163907827C3AC100043BE17 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3163907727C3AC100043BE17 /* FeedViewController.swift */; };
+		3163907B27C3AD360043BE17 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3163907A27C3AD360043BE17 /* FeedModel.swift */; };
 		31D8D63527BF2C3600A99BF1 /* FeedTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D8D63427BF2C3600A99BF1 /* FeedTabView.swift */; };
 		31D8D63727C24F6700A99BF1 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D8D63627C24F6700A99BF1 /* FeedTableViewController.swift */; };
 		31D8D63927C24FBF00A99BF1 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D8D63827C24FBF00A99BF1 /* FeedTableViewCell.swift */; };
@@ -46,6 +48,8 @@
 		312D271727BE4F6D00D0BB64 /* FeedContainerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedContainerCollectionViewCell.swift; sourceTree = "<group>"; };
 		312D271A27BE514B00D0BB64 /* UIViewController+Douyin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Douyin.swift"; sourceTree = "<group>"; };
 		312D271C27BE6B6100D0BB64 /* UIcolor+Douyin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIcolor+Douyin.swift"; sourceTree = "<group>"; };
+		3163907727C3AC100043BE17 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		3163907A27C3AD360043BE17 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
 		31D8D63427BF2C3600A99BF1 /* FeedTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTabView.swift; sourceTree = "<group>"; };
 		31D8D63627C24F6700A99BF1 /* FeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
 		31D8D63827C24FBF00A99BF1 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
@@ -115,6 +119,7 @@
 		312D26FD27BE3C3000D0BB64 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				3163907927C3AD1D0043BE17 /* Models */,
 				312D271E27BE6CA000D0BB64 /* Views */,
 				312D270327BE3C7A00D0BB64 /* ViewControllers */,
 			);
@@ -167,6 +172,7 @@
 				312D270A27BE3F4300D0BB64 /* FeedRootViewController.swift */,
 				312D271527BE4D9100D0BB64 /* FeedContainerViewController.swift */,
 				31D8D63627C24F6700A99BF1 /* FeedTableViewController.swift */,
+				3163907727C3AC100043BE17 /* FeedViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -220,6 +226,14 @@
 				31D8D63827C24FBF00A99BF1 /* FeedTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		3163907927C3AD1D0043BE17 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3163907A27C3AD360043BE17 /* FeedModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		8EE126D22CFDB9A1D890AC52 /* Frameworks */ = {
@@ -354,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				312D271B27BE514B00D0BB64 /* UIViewController+Douyin.swift in Sources */,
+				3163907B27C3AD360043BE17 /* FeedModel.swift in Sources */,
 				312D270D27BE3F6300D0BB64 /* FriendRootViewController.swift in Sources */,
 				312D270927BE3F2400D0BB64 /* TabBarViewController.swift in Sources */,
 				312D271127BE3F9100D0BB64 /* MessageRootViewController.swift in Sources */,
@@ -362,6 +377,7 @@
 				31D8D63527BF2C3600A99BF1 /* FeedTabView.swift in Sources */,
 				31D8D63727C24F6700A99BF1 /* FeedTableViewController.swift in Sources */,
 				312D271D27BE6B6100D0BB64 /* UIcolor+Douyin.swift in Sources */,
+				3163907827C3AC100043BE17 /* FeedViewController.swift in Sources */,
 				31D8D63927C24FBF00A99BF1 /* FeedTableViewCell.swift in Sources */,
 				312D26ED27BE32B900D0BB64 /* ViewController.swift in Sources */,
 				312D271427BE3FBC00D0BB64 /* ProfileRootViewController.swift in Sources */,
@@ -512,7 +528,6 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DuoYinDemo/Info.plist;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -539,7 +554,6 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DuoYinDemo/Info.plist;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

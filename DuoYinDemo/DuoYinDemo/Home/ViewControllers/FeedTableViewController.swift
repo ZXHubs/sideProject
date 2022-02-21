@@ -57,11 +57,15 @@ class FeedTableViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     private func play() {
-        
+        tableView.visibleCells.forEach { cell in
+            (cell as? FeedTableViewCell)?.play()
+        }
     }
     
     private func pause() {
-        
+        tableView.visibleCells.forEach { cell in
+            (cell as? FeedTableViewCell)?.pause()
+        }
     }
     // 自己管理生命周期
     override var shouldAutomaticallyForwardAppearanceMethods: Bool {
@@ -105,6 +109,9 @@ class FeedTableViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: FeedTableViewCell.reuseIdentifierString, for: indexPath)
         cell.contentView.backgroundColor = UIColor.randomColor
+        if let cell = cell as? FeedTableViewCell {
+            cell.config(FeedModel())
+        }
         return cell
     }
 }

@@ -12,14 +12,24 @@ class FeedTableViewCell: UITableViewCell {
     
     static let reuseIdentifierString = "FeedTableViewCell"
     
-    var viewController: UIViewController?
+    var viewController: FeedViewController?
+    
+    func config(_ feed: FeedModel) {
+        viewController?.view.removeFromSuperview()
+        let vc = FeedViewController(with: feed)
+        viewController = vc
+        contentView.addSubview(vc.view)
+        vc.view.snp.makeConstraints { make in
+            make.edges.equalTo(0)
+        }
+    }
     
     func play() {
-        
+        viewController?.play()
     }
     
     func pause() {
-        
+        viewController?.pause()
     }
     
 }

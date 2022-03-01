@@ -19,6 +19,22 @@ class HomeViewController: UIViewController {
         return titleView
     }()
     
+    private lazy var pageContentView: PageContentView = {
+        // 1.确定内容的frame
+        let contentHeigh = UIScreenHeigh - (statusBarH + navigationBarH + titleViewHeigh + 50)
+        let contentFrame = CGRect(x: 0, y: statusBarH + navigationBarH, width: UIScreenWidth, height: contentHeigh)
+        
+        // 2.确定所有的子控制器
+        var childVC = [UIViewController]()
+        for _ in 0..<4 {
+            let vc = UIViewController()
+            vc.view.backgroundColor = UIColor(r: CGFloat(arc4random()), g: CGFloat(arc4random()), b: CGFloat(arc4random()))
+            childVC.append(vc)
+        }
+        let contentView = PageContentView(frame: contentFrame, childVC: childVC, parentsViewController: self)
+        return contentView
+    }()
+    
     // MARK: 系统回调函数
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +57,11 @@ extension HomeViewController {
         setupNavgationBar()
         
         // 2.添加titleView
+        
+        
+        // 3.添加ContentView
+        view.addSubview(pageContentView)
+        pageContentView.backgroundColor = UIColor.purple
         view.addSubview(pageTitleView)
     }
     

@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBAction func touchCard(_ sender: UIButton) {
         filpCard(withEmoji: "🥳", on: sender)
     }

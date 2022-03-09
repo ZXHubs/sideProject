@@ -9,13 +9,24 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBAction func touchCard(_ sender: UIButton) {
-        filpCard(withEmoji: "🥳", on: sender)
+    var flipCount: Int = 0 {
+        didSet {
+            scoreLabel.text = "Flips: \(flipCount)"
+        }
     }
     
-    @IBAction func secondCard(_ sender: UIButton) {
-        filpCard(withEmoji: "🤣", on: sender)
+    var emoji: Array<String> = ["🎃", "👻", "🎃", "👻"]
+    
+    @IBOutlet weak var scoreLabel: UILabel!
+    
+    @IBOutlet var buttons: [UIButton]!
+    @IBAction func touchCard(_ sender: UIButton) {
+        flipCount += 1
+        if let cardNumber = buttons.firstIndex(of: sender){
+            filpCard(withEmoji: emoji[cardNumber], on: sender)
+        }
     }
+
     func filpCard(withEmoji emoji: String, on button: UIButton) {
         if button.currentTitle == emoji {
             button.setTitle("", for: .normal)
@@ -28,7 +39,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        scoreLabel.textColor = .orange
+        scoreLabel.textAlignment = .center
+        scoreLabel.font = UIFont.systemFont(ofSize: 30)
+        
     }
 
 

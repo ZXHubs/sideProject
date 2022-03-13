@@ -44,7 +44,7 @@ class ViewController: UIViewController {
             }
         }
     }
-    var emoji: Array<String> = ["🎃", "👻", "🎃", "👻"]
+    var emoji: Array<String> = ["🎃", "👻", "😂", "😏", "🌮", "🤓"]
     var emoj = Dictionary<Int,String>()
     
     func emoji(for card: Card) ->String {
